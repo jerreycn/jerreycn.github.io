@@ -87,15 +87,22 @@
       summary.textContent = post.summary || "";
 
       var meta = document.createElement("div");
-      meta.className = "post-date";
-      meta.textContent = post.date || "";
+      meta.className = "post-meta-row";
 
+      var dateSpan = document.createElement("span");
+      dateSpan.className = "post-date";
+      dateSpan.textContent = post.date || "";
+      meta.appendChild(dateSpan);
+
+      var tagsSpan = document.createElement("span");
+      tagsSpan.className = "post-tags";
       (post.tags || []).forEach(function (t) {
         var tag = document.createElement("span");
         tag.className = "tag";
         tag.textContent = t;
-        meta.appendChild(tag);
+        tagsSpan.appendChild(tag);
       });
+      meta.appendChild(tagsSpan);
 
       li.appendChild(titleLink);
       li.appendChild(summary);
@@ -130,15 +137,28 @@
 
     appendLink("← 上一页", current - 1, current === 1, false);
 
-    var pages = [];
-    for (var i = 1; i <= totalPages; i++) {
-      // 页数很多时只显示当前页前后各 2 页 + 首尾页
-      if (totalPages <= 9 || i === 1 || i === totalPages ||
-          Math.abs(i - current) <= 2) {
-        if (pages.length && i - pages[pages.length - 1] > 1) pages.push("…");
-        pages.push(i);
+    var numbers = [];
+    if (totalPages <= 10) {
+      // 不超过 10 页时全部显示
+      for (var i = 1; i <= totalPages; i++) numbers.push(i);
+    } else {
+      // 超过 10 页：首尾页 + 当前页前后各 3 页，页码总数不超过 10
+      var wanted = {};
+      wanted[1] = true;
+      wanted[totalPages] = true;
+      for (var i = Math.max(1, current - 3); i <= Math.min(totalPages, current + 3); i++) {
+        wanted[i] = true;
+      }
+      for (var k = 1; k <= totalPages; k++) {
+        if (wanted[k]) numbers.push(k);
       }
     }
+
+    var pages = [];
+    numbers.forEach(function (n, idx) {
+      if (idx > 0 && n - numbers[idx - 1] > 1) pages.push("…");
+      pages.push(n);
+    });
     pages.forEach(function (item) {
       if (item === "…") {
         var span = document.createElement("span");
