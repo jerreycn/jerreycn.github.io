@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="profile">
+        <img id="avatar" class="avatar" src="" alt="avatar" hidden>
+        <div>
+          <h1 id="profile-name">Loading…</h1>
+          <p id="profile-tagline" class="tagline"></p>
+        </div>
+      </div>
+      <nav id="social" class="social"></nav>
+    </header>
+
+    <main>
+      <section class="bio">
+        <p id="profile-bio"></p>
+      </section>
+
+      <section>
+        <h2 class="section-title">📝 文章</h2>
+        <ul id="post-list" class="post-list">
+          <li class="muted">加载中…</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> <span id="footer-name"></span> · Powered by GitHub Pages · <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

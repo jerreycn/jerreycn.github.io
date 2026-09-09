@@ -1,0 +1,21 @@
+{
+  "profile": {
+    "name": "你的名字",
+    "tagline": "架构师 / 开发者 / 写点东西",
+    "avatar": "",
+    "bio": "在这里写一段关于你自己的介绍。修改 data/content.json 即可更新本页所有内容。",
+    "social": [
+      { "label": "GitHub", "url": "https://github.com/你的用户名" },
+      { "label": "Email", "url": "mailto:you@example.com" }
+    ]
+  },
+  "posts": [
+    {
+      "slug": "hello-world",
+      "date": "2026-09-09",
+      "title": "你好，世界 —— 这是第一篇文章",
+      "summary": "演示如何发布文章：往 posts/ 目录放一个 .md 文件，再在这里加一条记录即可。",
+      "tags": ["公告", "指南"]
+    }
+  ]
+}
