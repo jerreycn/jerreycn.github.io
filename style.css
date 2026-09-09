@@ -313,6 +313,31 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pagination a.pg-disabled:hover { border-color: var(--border); box-shadow: none; }
 .pg-ellipsis { color: var(--text-muted); padding: 0 0.2rem; }
 
+/* ---- 标签筛选 ---- */
+.tag-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(61, 220, 151, 0.4);
+  border-radius: 6px;
+  background: rgba(61, 220, 151, 0.06);
+  font-size: 0.85rem;
+}
+.tag-filter-info { color: var(--green); }
+.tag-filter-clear { color: var(--red); font-size: 0.8rem; }
+.tag-filter-clear:hover { text-decoration: underline; }
+
+.tag-link { cursor: pointer; }
+.tag-link:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.25);
+}
+
 /* ---- 快捷链接 ---- */
 .friend-links { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--border); }
 
