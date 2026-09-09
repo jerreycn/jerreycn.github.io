@@ -39,5 +39,25 @@
       "summary": "演示如何发布文章：往 posts/ 目录放一个 .md 文件，再在这里加一条记录即可。",
       "tags": ["公告", "指南"]
     }
+  ],
+  "links": [
+    { "name": "ChatGPT", "url": "https://chatgpt.com" },
+    { "name": "Claude", "url": "https://claude.ai" },
+    { "name": "Gemini", "url": "https://gemini.google.com" },
+    { "name": "DeepSeek", "url": "https://chat.deepseek.com" },
+    { "name": "Kimi", "url": "https://kimi.moonshot.cn" },
+    { "name": "通义千问", "url": "https://tongyi.aliyun.com" },
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "Stack Overflow", "url": "https://stackoverflow.com" },
+    { "name": "MDN", "url": "https://developer.mozilla.org" },
+    { "name": "知乎", "url": "https://www.zhihu.com" },
+    { "name": "哔哩哔哩", "url": "https://www.bilibili.com" },
+    { "name": "掘金", "url": "https://juejin.cn" },
+    { "name": "V2EX", "url": "https://www.v2ex.com" },
+    { "name": "少数派", "url": "https://sspai.com" },
+    { "name": "Hacker News", "url": "https://news.ycombinator.com" },
+    { "name": "百度", "url": "https://www.baidu.com" },
+    { "name": "淘宝", "url": "https://www.taobao.com" },
+    { "name": "微博", "url": "https://weibo.com" }
   ]
 }

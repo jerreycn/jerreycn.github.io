@@ -313,6 +313,38 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pagination a.pg-disabled:hover { border-color: var(--border); box-shadow: none; }
 .pg-ellipsis { color: var(--text-muted); padding: 0 0.2rem; }
 
+/* ---- 快捷链接 ---- */
+.friend-links { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--border); }
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.6rem;
+}
+.links-grid a {
+  text-align: center;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(20, 28, 40, 0.55);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.15s ease;
+}
+.links-grid a:hover {
+  text-decoration: none;
+  color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25);
+  background: rgba(34, 211, 238, 0.06);
+}
+
+@media (max-width: 900px) { .links-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 560px) { .links-grid { grid-template-columns: repeat(3, 1fr); } }
+
 /* ---- 页脚 ---- */
 .site-footer {
   margin-top: 2.5rem;

@@ -19,7 +19,7 @@
   function el(id) { return document.getElementById(id); }
 
   /* ---------------- 首页 ---------------- */
-  var POSTS_PER_PAGE = 20;
+  var POSTS_PER_PAGE = 10;
 
   function renderIndex(data) {
     var p = data.profile || {};
@@ -60,6 +60,24 @@
 
     renderPostList(posts, page);
     renderPagination(page, totalPages);
+    renderLinks(data.links || []);
+  }
+
+  /* ---------------- 快捷链接 ---------------- */
+  function renderLinks(links) {
+    var box = el("links");
+    if (!box) return;
+    box.innerHTML = "";
+    if (!links.length) { box.closest(".friend-links").hidden = true; return; }
+    links.forEach(function (link) {
+      var a = document.createElement("a");
+      a.href = link.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = link.name;
+      a.title = link.url;
+      box.appendChild(a);
+    });
   }
 
   function renderPostList(posts, page) {
