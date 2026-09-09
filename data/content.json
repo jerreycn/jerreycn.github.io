@@ -12,6 +12,27 @@
   },
   "posts": [
     {
+      "slug": "llm-token",
+      "date": "2026-09-10",
+      "title": "AI 大模型是如何计算 Token 的",
+      "summary": "Token 不是字也不是词：BPE 分词原理、为什么中文更费 token、计费与上下文窗口怎么算。",
+      "tags": ["AI", "大模型"]
+    },
+    {
+      "slug": "git-commands",
+      "date": "2026-09-10",
+      "title": "Git 常用命令及使用说明",
+      "summary": "按场景分类的 Git 速查手册：分支、远程、撤销回退、stash、rebase 与 merge 的取舍、常见坑。",
+      "tags": ["Git", "工具箱"]
+    },
+    {
+      "slug": "linux-commands",
+      "date": "2026-09-10",
+      "title": "Linux 常用命令及使用说明",
+      "summary": "文件查找、文本三剑客、权限、进程网络、包管理——服务器日常运维高频命令速查。",
+      "tags": ["Linux", "工具箱"]
+    },
+    {
       "slug": "hello-world",
       "date": "2026-09-09",
       "title": "你好，世界 —— 这是第一篇文章",
