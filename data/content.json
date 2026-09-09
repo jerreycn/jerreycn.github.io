@@ -1,12 +1,13 @@
 {
   "profile": {
-    "name": "jerreycn",
-    "tagline": "架构师 · 全栈开发 · 偶尔写字",
+    "name": "Jerrey",
+    "tagline": "高级全栈软件工程师 · 前端 & 后端开发",
     "avatar": "https://github.com/jerreycn.png",
-    "bio": "20 年+ 老兵，写代码、管服务器、也写点东西。这里是我在网上的自留地。",
+    "bio": "全栈开发工程师，擅长前后端技术，关注高效可维护的应用架构，也喜欢折腾 UI/UX 与现代 Web 开发趋势。",
     "social": [
       { "label": "github.com/jerreycn", "url": "https://github.com/jerreycn" },
-      { "label": "Email", "url": "mailto:jerreycn@users.noreply.github.com" }
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/jerreycn" },
+      { "label": "Email", "url": "mailto:jerreycn@qq.com" }
     ]
   },
   "posts": [
