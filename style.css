@@ -275,6 +275,33 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .markdown-body th { background: rgba(34, 211, 238, 0.07); color: var(--cyan); }
 
+/* ---- 分页 ---- */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+}
+.pagination a {
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--cyan);
+  transition: all 0.15s ease;
+}
+.pagination a:hover { text-decoration: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(34, 211, 238, 0.25); }
+.pagination a.pg-current {
+  color: var(--text-bright);
+  border-color: var(--cyan);
+  background: rgba(34, 211, 238, 0.12);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
+}
+.pagination a.pg-disabled { color: var(--text-muted); border-color: var(--border); cursor: default; }
+.pagination a.pg-disabled:hover { border-color: var(--border); box-shadow: none; }
+.pg-ellipsis { color: var(--text-muted); padding: 0 0.2rem; }
+
 /* ---- 页脚 ---- */
 .site-footer {
   margin-top: 2.5rem;

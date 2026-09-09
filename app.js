@@ -19,6 +19,8 @@
   function el(id) { return document.getElementById(id); }
 
   /* ---------------- 首页 ---------------- */
+  var POSTS_PER_PAGE = 20;
+
   function renderIndex(data) {
     var p = data.profile || {};
 
@@ -46,18 +48,33 @@
       social.appendChild(a);
     });
 
-    var list = el("post-list");
-    list.innerHTML = "";
     var posts = (data.posts || []).slice().sort(function (a, b) {
       return (b.date || "").localeCompare(a.date || "");
     });
 
-    if (posts.length === 0) {
+    var totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+    var params = new URLSearchParams(location.search);
+    var page = parseInt(params.get("page"), 10);
+    if (!page || page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+
+    renderPostList(posts, page);
+    renderPagination(page, totalPages);
+  }
+
+  function renderPostList(posts, page) {
+    var list = el("post-list");
+    list.innerHTML = "";
+
+    var start = (page - 1) * POSTS_PER_PAGE;
+    var pagePosts = posts.slice(start, start + POSTS_PER_PAGE);
+
+    if (pagePosts.length === 0) {
       list.innerHTML = '<li class="muted">还没有文章，去 data/content.json 里添加吧。</li>';
       return;
     }
 
-    posts.forEach(function (post) {
+    pagePosts.forEach(function (post) {
       var li = document.createElement("li");
       li.className = "post-item";
 
@@ -86,6 +103,75 @@
       list.appendChild(li);
     });
   }
+
+  function renderPagination(current, totalPages) {
+    var box = el("pagination");
+    box.innerHTML = "";
+    if (totalPages <= 1) return;
+
+    function pageUrl(n) {
+      return n === 1 ? "./" : "./?page=" + n;
+    }
+
+    function appendLink(text, targetPage, disabled, current) {
+      var a = document.createElement("a");
+      a.textContent = text;
+      a.href = disabled ? "javascript:void(0)" : pageUrl(targetPage);
+      if (disabled) a.className = "pg-disabled";
+      if (current) a.className = "pg-current";
+      if (!disabled && !current) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          gotoPage(targetPage);
+        });
+      }
+      box.appendChild(a);
+    }
+
+    appendLink("← 上一页", current - 1, current === 1, false);
+
+    var pages = [];
+    for (var i = 1; i <= totalPages; i++) {
+      // 页数很多时只显示当前页前后各 2 页 + 首尾页
+      if (totalPages <= 9 || i === 1 || i === totalPages ||
+          Math.abs(i - current) <= 2) {
+        if (pages.length && i - pages[pages.length - 1] > 1) pages.push("…");
+        pages.push(i);
+      }
+    }
+    pages.forEach(function (item) {
+      if (item === "…") {
+        var span = document.createElement("span");
+        span.className = "pg-ellipsis";
+        span.textContent = "…";
+        box.appendChild(span);
+      } else {
+        appendLink(String(item), item, false, item === current);
+      }
+    });
+
+    appendLink("下一页 →", current + 1, current === totalPages, false);
+  }
+
+  function gotoPage(n) {
+    var url = n === 1 ? location.pathname : location.pathname + "?page=" + n;
+    history.pushState(null, "", url);
+    loadContent().then(function (data) {
+      var posts = (data.posts || []).slice().sort(function (a, b) {
+        return (b.date || "").localeCompare(a.date || "");
+      });
+      var totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+      renderPostList(posts, n);
+      renderPagination(n, totalPages);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  window.addEventListener("popstate", function () {
+    loadContent().then(function (data) {
+      if (document.getElementById("post-list")) renderIndex(data);
+    });
+  });
 
   /* ---------------- 文章页 ---------------- */
   function renderArticle(data) {
