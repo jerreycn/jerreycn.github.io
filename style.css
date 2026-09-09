@@ -158,7 +158,7 @@ h1 {
 .tagline::before { content: "# "; color: var(--purple); }
 
 .social { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
-.social a {
+.social a, .social span.social-plain {
   font-size: 0.82rem;
   padding: 0.2rem 0.7rem;
   border: 1px solid var(--border);
@@ -167,6 +167,8 @@ h1 {
   transition: all 0.15s ease;
 }
 .social a::before { content: "→ "; color: var(--text-muted); }
+.social span.social-plain { color: var(--green); cursor: default; }
+.social span.social-plain::before { content: "◉ "; color: var(--green); }
 .social a:hover { text-decoration: none; border-color: var(--cyan); box-shadow: 0 0 12px rgba(34, 211, 238, 0.25); background: rgba(34, 211, 238, 0.06); }
 
 .bio-line p { margin: 0; color: var(--text); font-size: 0.92rem; }
@@ -227,8 +229,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .tag {
   display: inline-block;
-  font-size: 0.74rem;
-  padding: 0 0.5rem;
+  font-size: 0.68rem;
+  padding: 0 0.45rem;
   margin-right: 0.3rem;
   border-radius: 4px;
   background: rgba(167, 139, 250, 0.12);

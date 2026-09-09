@@ -41,12 +41,17 @@
     var social = el("social");
     social.innerHTML = "";
     (p.social || []).forEach(function (s) {
-      var a = document.createElement("a");
-      a.href = s.url;
-      a.target = "_blank";
-      a.rel = "noopener";
-      a.textContent = s.label;
-      social.appendChild(a);
+      // 有 url 的渲染成链接，没有 url 的（如微信号）渲染成纯文本胶囊
+      var node = document.createElement(s.url ? "a" : "span");
+      if (s.url) {
+        node.href = s.url;
+        node.target = "_blank";
+        node.rel = "noopener";
+      } else {
+        node.className = "social-plain";
+      }
+      node.textContent = s.label;
+      social.appendChild(node);
     });
 
     state.all = (data.posts || []).slice().sort(function (a, b) {
