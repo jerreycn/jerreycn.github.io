@@ -13,6 +13,20 @@
   },
   "posts": [
     {
+      "slug": "docker-vs-k8s",
+      "date": "2026-09-10",
+      "title": "Docker vs Kubernetes：怎么选，容器部署怎么做",
+      "summary": "两者是上下游而非竞品：能力对比、按规模选型、容器部署八步法、Compose 与 K8s 两种部署形态实例。",
+      "tags": ["Docker", "Kubernetes", "部署"]
+    },
+    {
+      "slug": "docker-commands",
+      "date": "2026-09-10",
+      "title": "Docker 常用命令及使用说明",
+      "summary": "镜像、容器、数据卷、网络、Dockerfile 分层构建、Compose 编排与清理维护——容器日常速查。",
+      "tags": ["Docker", "工具箱"]
+    },
+    {
       "slug": "llm-token",
       "date": "2026-09-10",
       "title": "AI 大模型是如何计算 Token 的",
