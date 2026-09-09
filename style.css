@@ -314,6 +314,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pg-ellipsis { color: var(--text-muted); padding: 0 0.2rem; }
 
 /* ---- 标签筛选 ---- */
+.tag-filter[hidden] { display: none; }
 .tag-filter {
   display: flex;
   align-items: center;
