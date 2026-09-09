@@ -3,29 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文章 - 我的个人网站</title>
+  <title>文章</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
   <div class="container">
-    <header class="site-header">
-      <a class="back-link" href="./index.html">← 返回首页</a>
-    </header>
+    <div class="terminal">
+      <div class="term-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="term-title">guest@jerreycn: ~/posts — reading</span>
+      </div>
 
-    <main>
-      <article class="post">
-        <h1 id="post-title" class="post-title">加载中…</h1>
-        <p id="post-meta" class="post-meta"></p>
-        <hr class="post-divider">
-        <div id="post-content" class="markdown-body">
-          <p class="muted">加载中…</p>
-        </div>
-      </article>
-    </main>
+      <div class="term-body">
+        <header class="site-header">
+          <div class="term-line prompt-line">
+            <span class="prompt">guest@jerreycn</span><span class="prompt-sep">:</span><span class="prompt-path">~/posts</span><span class="prompt-sep">$</span>
+            <a class="back-link" href="./index.html">cd ..</a>
+          </div>
+        </header>
 
-    <footer class="site-footer">
-      <p>© <span id="year"></span> <a href="./index.html">我的个人网站</a></p>
-    </footer>
+        <main>
+          <article class="post">
+            <h1 id="post-title" class="post-title glow-text">加载中…</h1>
+            <p id="post-meta" class="post-meta"></p>
+            <hr class="post-divider">
+            <div id="post-content" class="markdown-body">
+              <p class="muted">加载中…</p>
+            </div>
+          </article>
+        </main>
+
+        <footer class="site-footer">
+          <p><span class="prompt-sep">$</span> © <span id="year"></span> <a href="./index.html">jerreycn</a> · Powered by GitHub Pages</p>
+        </footer>
+      </div>
+    </div>
   </div>
   <script src="vendor/marked.min.js"></script>
   <script src="app.js"></script>

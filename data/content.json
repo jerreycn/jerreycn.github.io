@@ -1,12 +1,12 @@
 {
   "profile": {
-    "name": "你的名字",
-    "tagline": "架构师 / 开发者 / 写点东西",
-    "avatar": "",
-    "bio": "在这里写一段关于你自己的介绍。修改 data/content.json 即可更新本页所有内容。",
+    "name": "jerreycn",
+    "tagline": "架构师 · 全栈开发 · 偶尔写字",
+    "avatar": "https://github.com/jerreycn.png",
+    "bio": "20 年+ 老兵，写代码、管服务器、也写点东西。这里是我在网上的自留地。",
     "social": [
-      { "label": "GitHub", "url": "https://github.com/你的用户名" },
-      { "label": "Email", "url": "mailto:you@example.com" }
+      { "label": "github.com/jerreycn", "url": "https://github.com/jerreycn" },
+      { "label": "Email", "url": "mailto:jerreycn@users.noreply.github.com" }
     ]
   },
   "posts": [

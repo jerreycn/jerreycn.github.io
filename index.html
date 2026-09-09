@@ -3,38 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的个人网站</title>
+  <title>jerreycn</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
   <div class="container">
-    <header class="site-header">
-      <div class="profile">
-        <img id="avatar" class="avatar" src="" alt="avatar" hidden>
-        <div>
-          <h1 id="profile-name">Loading…</h1>
-          <p id="profile-tagline" class="tagline"></p>
-        </div>
+    <!-- 终端窗口标题栏 -->
+    <div class="terminal">
+      <div class="term-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="term-title">guest@jerreycn: ~ — zsh</span>
       </div>
-      <nav id="social" class="social"></nav>
-    </header>
 
-    <main>
-      <section class="bio">
-        <p id="profile-bio"></p>
-      </section>
+      <div class="term-body">
+        <header class="site-header">
+          <div class="term-line prompt-line">
+            <span class="prompt">guest@jerreycn</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sep">$</span>
+            <span class="cmd">whoami</span>
+          </div>
 
-      <section>
-        <h2 class="section-title">📝 文章</h2>
-        <ul id="post-list" class="post-list">
-          <li class="muted">加载中…</li>
-        </ul>
-      </section>
-    </main>
+          <div class="profile">
+            <img id="avatar" class="avatar" src="" alt="avatar" hidden>
+            <div>
+              <h1 id="profile-name" class="glow-text">Loading…<span class="cursor" aria-hidden="true"></span></h1>
+              <p id="profile-tagline" class="tagline"></p>
+            </div>
+          </div>
+          <nav id="social" class="social"></nav>
 
-    <footer class="site-footer">
-      <p>© <span id="year"></span> <span id="footer-name"></span> · Powered by GitHub Pages · <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
-    </footer>
+          <div class="term-line bio-line">
+            <p id="profile-bio"></p>
+          </div>
+        </header>
+
+        <main>
+          <section>
+            <div class="term-line prompt-line">
+              <span class="prompt">guest@jerreycn</span><span class="prompt-sep">:</span><span class="prompt-path">~/posts</span><span class="prompt-sep">$</span>
+              <span class="cmd">ls -t</span>
+            </div>
+            <h2 class="section-title">▸ 文章 <span class="muted">// posts</span></h2>
+            <ul id="post-list" class="post-list">
+              <li class="muted">加载中…</li>
+            </ul>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p><span class="prompt-sep">$</span> exit 0 &nbsp;·&nbsp; © <span id="year"></span> <span id="footer-name"></span> · Powered by GitHub Pages</p>
+        </footer>
+      </div>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
