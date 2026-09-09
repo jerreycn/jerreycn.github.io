@@ -13,6 +13,13 @@
   },
   "posts": [
     {
+      "slug": "physical-ai",
+      "date": "2026-09-10",
+      "title": "什么是物理 AI？它做什么、怎么做",
+      "summary": "给大模型装上身体和物理常识：物理 AI 的定义、自动驾驶与人形机器人等应用场景、四大核心技术、从仿真到真机的落地路线。",
+      "tags": ["AI", "机器人", "物理AI"]
+    },
+    {
       "slug": "docker-vs-k8s",
       "date": "2026-09-10",
       "title": "Docker vs Kubernetes：怎么选，容器部署怎么做",
