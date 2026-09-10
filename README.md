@@ -53,14 +53,25 @@ python -m http.server 8080
 
 ```
 personal-site/
-├── index.html          # 首页：个人资料 + 文章列表
+├── index.html          # 首页：个人资料 + 文章列表 + 快捷链接
+├── about.html          # 关于页（导航「关于」）
 ├── article.html        # 文章页：article.html?post=<slug>
-├── style.css           # 样式（自动适配系统深/浅色模式）
-├── app.js              # 渲染逻辑（fetch content.json + marked 渲染）
-├── data/content.json   # ⭐ 唯一需要经常改的文件（个人资料 + 文章索引）
+├── CNAME               # 自定义域名（www.jerrey.cn），勿删
+├── style.css           # 样式（终端风皮肤）
+├── app.js              # 渲染逻辑（fetch content.json + marked 渲染 + 分页 + 标签筛选）
+├── data/content.json   # ⭐ 唯一需要经常改的文件（个人资料 + 文章索引 + 快捷链接）
 ├── posts/              # ⭐ 文章目录，每篇一个 .md 文件
 │   ├── hello-world.md
 │   └── _template.md    # 文章模板，复制它开始写
 ├── vendor/marked.min.js
 └── .github/workflows/pages.yml   # push 后自动部署
 ```
+
+## 六、站点能力速查
+
+| 能力 | 说明 |
+| ---- | ---- |
+| 文章分页 | 每页 10 条，URL 参数 `?page=2`，页码最多显示 10 个 |
+| 标签筛选 | 点击文章标签或访问 `?tag=AI`，与分页可叠加 `?tag=AI&page=2` |
+| 自定义域名 | `CNAME` 文件内容为 `www.jerrey.cn`，改动需同时更新 DNS |
+
