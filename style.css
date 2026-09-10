@@ -375,6 +375,30 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   box-shadow: 0 0 8px rgba(34, 211, 238, 0.25);
 }
 
+/* ---- 数据一览 ---- */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+.stat-card {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(20, 28, 40, 0.55);
+}
+.stat-num {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--cyan);
+  text-shadow: 0 0 14px rgba(34, 211, 238, 0.35);
+}
+.stat-label { font-size: 0.8rem; color: var(--text-muted); }
+
+@media (max-width: 560px) { .stat-row { grid-template-columns: repeat(2, 1fr); } }
+
 /* ---- 关于页 ---- */
 .about-grid {
   display: grid;
