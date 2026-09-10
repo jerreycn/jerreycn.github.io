@@ -208,6 +208,7 @@ h1 {
 /* ---- 文章区 ---- */
 .section-title { font-size: 1.05rem; margin: 0 0 1rem; color: var(--text-bright); font-weight: 700; }
 .section-title .muted { font-weight: 400; }
+.section-gap { margin-top: 1rem; }
 
 .muted { color: var(--text-muted); }
 
