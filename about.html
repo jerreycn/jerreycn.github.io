@@ -58,12 +58,28 @@
           </section>
 
           <section>
-            <h2 class="section-title">▸ 数据一览 <span class="muted">// stats</span></h2>
+            <h2 class="section-title">▸ 数据一览 <span class="muted">// stats --summary</span></h2>
             <div class="stat-row">
-              <div class="stat-card"><span class="stat-num">20+</span><span class="stat-label">年开发经验</span></div>
-              <div class="stat-card"><span class="stat-num">10+</span><span class="stat-label">编程语言</span></div>
-              <div class="stat-card"><span class="stat-num">5+</span><span class="stat-label">数据库</span></div>
-              <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">踩过的坑</span></div>
+              <div class="stat-card stat-cyan">
+                <span class="stat-icon">⌛</span>
+                <span class="stat-num">20+</span>
+                <span class="stat-label">年开发经验</span>
+              </div>
+              <div class="stat-card stat-purple">
+                <span class="stat-icon">{ }</span>
+                <span class="stat-num">10+</span>
+                <span class="stat-label">编程语言</span>
+              </div>
+              <div class="stat-card stat-green">
+                <span class="stat-icon">⌬</span>
+                <span class="stat-num">5+</span>
+                <span class="stat-label">数据库</span>
+              </div>
+              <div class="stat-card stat-amber">
+                <span class="stat-icon">⚠</span>
+                <span class="stat-num">∞</span>
+                <span class="stat-label">踩过的坑</span>
+              </div>
             </div>
           </section>
 
@@ -111,38 +127,54 @@
 
           <section>
             <h2 class="section-title">▸ 代表项目 <span class="muted">// ls ~/projects</span></h2>
-            <div class="post-list">
-              <div class="post-item">
-                <a>数据分析师小程序</a>
-                <p class="post-summary">跨平台数据分析工具，集成彩票与股票两大分析模块，覆盖数据采集、指标计算到可视化展示的完整链路。</p>
-                <div class="post-meta-row">
-                  <span class="post-date">uni-app · Vue 3 · TypeScript · Pinia</span>
-                  <span class="post-tags"><span class="tag">移动端</span><span class="tag">数据可视化</span></span>
-                </div>
+            <div class="proj-grid">
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">📊</span><h3>数据分析师小程序</h3></div>
+                <p class="proj-desc">跨平台数据分析工具，集成彩票与股票两大分析模块，覆盖数据采集、指标计算到可视化展示的完整链路。</p>
+                <div class="proj-stack">uni-app · Vue 3 · TypeScript · Pinia</div>
+                <div class="proj-tags"><span class="tag">移动端</span><span class="tag">数据可视化</span></div>
               </div>
-              <div class="post-item">
-                <a>科技大数据平台</a>
-                <p class="post-summary">政务领域项目全流程管理系统：申报、评审、立项到验收，主导项目编号体系设计与跨部门数据整合。</p>
-                <div class="post-meta-row">
-                  <span class="post-date">ASP.NET Core · SqlSugar · SQL Server · NLog</span>
-                  <span class="post-tags"><span class="tag">政务</span><span class="tag">架构设计</span></span>
-                </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🏛️</span><h3>科技大数据平台</h3></div>
+                <p class="proj-desc">政务领域项目全流程管理系统：申报、评审、立项到验收，主导项目编号体系设计与跨部门数据整合。</p>
+                <div class="proj-stack">ASP.NET Core · SqlSugar · SQL Server</div>
+                <div class="proj-tags"><span class="tag">政务</span><span class="tag">架构设计</span></div>
               </div>
-              <div class="post-item">
-                <a>信创环境 CMS 系统</a>
-                <p class="post-summary">将 Java CMS 系统完整迁移至麒麟操作系统 + 达梦数据库的内网环境，产出无 Docker 依赖的离线部署方案。</p>
-                <div class="post-meta-row">
-                  <span class="post-date">Java · Spring Boot · 达梦 DB · 麒麟 Linux</span>
-                  <span class="post-tags"><span class="tag">信创</span><span class="tag">离线部署</span></span>
-                </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🐧</span><h3>信创环境 CMS 系统</h3></div>
+                <p class="proj-desc">将 Java CMS 系统完整迁移至麒麟操作系统 + 达梦数据库的内网环境，产出无 Docker 依赖的离线部署方案。</p>
+                <div class="proj-stack">Java · Spring Boot · 达梦 DB · 麒麟 Linux</div>
+                <div class="proj-tags"><span class="tag">信创</span><span class="tag">离线部署</span></div>
               </div>
-              <div class="post-item">
-                <a>企业应用部署与运维</a>
-                <p class="post-summary">从裸机到云：Nginx 反向代理、多环境发布流水线、服务器与数据库的日常运维，以及容器化改造实践。</p>
-                <div class="post-meta-row">
-                  <span class="post-date">Nginx · Docker · Linux · 云服务器</span>
-                  <span class="post-tags"><span class="tag">运维</span><span class="tag">DevOps</span></span>
-                </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🛠️</span><h3>企业应用部署与运维</h3></div>
+                <p class="proj-desc">从裸机到云：Nginx 反向代理、多环境发布流水线、服务器与数据库的日常运维，以及容器化改造实践。</p>
+                <div class="proj-stack">Nginx · Docker · Linux · 云服务器</div>
+                <div class="proj-tags"><span class="tag">运维</span><span class="tag">DevOps</span></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🛒</span><h3>国内电商项目</h3></div>
+                <p class="proj-desc">面向国内市场的电商系统：商品、订单、支付、优惠券与库存管理，支撑大促高并发场景的稳定性优化。</p>
+                <div class="proj-stack">Java · Spring Boot · MySQL · Redis</div>
+                <div class="proj-tags"><span class="tag">电商</span><span class="tag">高并发</span></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🌍</span><h3>跨境电商项目</h3></div>
+                <p class="proj-desc">跨境贸易系统：多币种结算、多语言站点、国际物流跟踪与关务对接，打通海外仓与本地化支付链路。</p>
+                <div class="proj-stack">PHP · Laravel · MySQL · 第三方支付/物流 API</div>
+                <div class="proj-tags"><span class="tag">跨境电商</span><span class="tag">国际化</span></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">💰</span><h3>金融项目</h3></div>
+                <p class="proj-desc">金融业务系统：账户与清结算、对账流水、风控规则引擎，强调数据一致性、审计合规与交易安全。</p>
+                <div class="proj-stack">C# / .NET · SQL Server · 消息队列</div>
+                <div class="proj-tags"><span class="tag">金融</span><span class="tag">安全合规</span></div>
+              </div>
+              <div class="proj-card">
+                <div class="proj-head"><span class="proj-icon">🚚</span><h3>物流 SaaS 项目</h3></div>
+                <p class="proj-desc">多租户物流 SaaS 平台：运单管理、路径规划、运力调度与运费计算，支持租户级数据隔离与灵活计费。</p>
+                <div class="proj-stack">Java · Spring Boot · MySQL · Redis</div>
+                <div class="proj-tags"><span class="tag">SaaS</span><span class="tag">多租户</span></div>
               </div>
             </div>
           </section>
