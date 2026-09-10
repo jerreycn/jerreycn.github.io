@@ -113,11 +113,42 @@ body::before {
 /* ---- 头部 ---- */
 .site-header { padding-bottom: 1.25rem; border-bottom: 1px dashed var(--border); margin-bottom: 1.5rem; }
 
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0.9rem 0 1rem;
+}
+
 .profile {
   display: flex;
   align-items: center;
   gap: 1.1rem;
-  margin: 0.9rem 0 1rem;
+}
+
+/* ---- 顶部导航 ---- */
+.top-nav { display: flex; gap: 0.5rem; }
+.top-nav a {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+.top-nav a:hover {
+  text-decoration: none;
+  color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
+}
+.top-nav a.active {
+  color: var(--text-bright);
+  border-color: var(--cyan);
+  background: rgba(34, 211, 238, 0.08);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.18);
 }
 
 .avatar {
@@ -244,6 +275,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .back-link:hover { color: var(--cyan); text-decoration: none; }
 .site-header .back-link { color: var(--text-muted); }
 
+/* 文章页导航单独一行 */
+.site-header .top-nav { margin-top: 0.75rem; }
+
 .post-title { font-size: 1.55rem; line-height: 1.4; }
 .post-meta { color: var(--text-muted); font-size: 0.82rem; margin: 0.4rem 0 0; }
 .post-divider { border: none; border-top: 1px dashed var(--border); margin: 1.25rem 0 1.75rem; }
@@ -340,6 +374,45 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: var(--cyan);
   box-shadow: 0 0 8px rgba(34, 211, 238, 0.25);
 }
+
+/* ---- 关于页 ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+.about-card {
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(20, 28, 40, 0.55);
+  transition: all 0.15s ease;
+}
+.about-card:hover {
+  border-color: #264054;
+  background: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.12);
+}
+.about-card h3 { margin: 0 0 0.5rem; font-size: 0.95rem; color: var(--cyan); }
+.about-card p { margin: 0; font-size: 0.88rem; color: var(--text); }
+.about-card p::before { content: "› "; color: var(--text-muted); }
+
+.skill-list { list-style: none; margin: 0; padding: 0; }
+.skill-list li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.skill-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 560px) { .about-grid { grid-template-columns: 1fr; } }
 
 /* ---- 快捷链接 ---- */
 .friend-links { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--border); }

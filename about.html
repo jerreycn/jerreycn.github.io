@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 - Jerrey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <div class="container">
+    <div class="terminal">
+      <div class="term-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="term-title">guest@jerreycn: ~/about — zsh</span>
+      </div>
+
+      <div class="term-body">
+        <header class="site-header">
+          <div class="term-line prompt-line">
+            <span class="prompt">guest@jerreycn</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-sep">$</span>
+            <span class="cmd">cat about.md</span>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile">
+              <img class="avatar" src="https://github.com/jerreycn.png" alt="avatar">
+              <div>
+                <h1 class="glow-text">Jerrey<span class="cursor" aria-hidden="true"></span></h1>
+                <p class="tagline">高级全栈软件工程师 · 前端 &amp; 后端开发</p>
+              </div>
+            </div>
+            <nav class="top-nav" aria-label="主导航">
+              <a href="./">首页</a>
+              <a href="./about.html" class="active">关于</a>
+            </nav>
+          </div>
+
+          <nav class="social">
+            <a href="https://github.com/jerreycn" target="_blank" rel="noopener">github.com/jerreycn</a>
+            <a href="https://linkedin.com/in/jerreycn" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="social-plain">微信 jerreycn</span>
+            <a href="mailto:jerreycn@qq.com">Email</a>
+          </nav>
+        </header>
+
+        <main>
+          <section>
+            <h2 class="section-title">▸ 关于我 <span class="muted">// whoami</span></h2>
+            <div class="markdown-body">
+              <p>全栈开发工程师，近 20 年开发经验，擅长前后端技术，关注高效可维护的应用架构，也喜欢折腾 UI/UX 设计与现代 Web 开发趋势。</p>
+              <p>日常在 Windows 与 Linux 之间来回切换，写代码、管服务器、偶尔写点东西沉淀经验——这个小站就是我的笔记本。</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">▸ 技能 <span class="muted">// skills --list</span></h2>
+            <div class="about-grid">
+              <div class="about-card">
+                <h3>前端</h3>
+                <ul class="skill-list">
+                  <li>JavaScript / TypeScript</li>
+                  <li>HTML5 / CSS3 / Sass</li>
+                  <li>Vue / React / Angular</li>
+                  <li>uni-app 小程序开发</li>
+                </ul>
+              </div>
+              <div class="about-card">
+                <h3>后端</h3>
+                <ul class="skill-list">
+                  <li>Java / Spring Boot</li>
+                  <li>C# / .NET / VB.NET</li>
+                  <li>Python / Django / Flask</li>
+                  <li>PHP / Laravel / ThinkPHP</li>
+                  <li>Node.js</li>
+                </ul>
+              </div>
+              <div class="about-card">
+                <h3>运维 &amp; 数据库</h3>
+                <ul class="skill-list">
+                  <li>Nginx / Docker / K8s</li>
+                  <li>Linux（CentOS / Kylin）</li>
+                  <li>SQL Server / MySQL</li>
+                  <li>达梦数据库（DM）</li>
+                </ul>
+              </div>
+              <div class="about-card">
+                <h3>关注方向</h3>
+                <ul class="skill-list">
+                  <li>AI 应用与工程化</li>
+                  <li>容器化与自动化部署</li>
+                  <li>信创环境适配</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">▸ 联系我 <span class="muted">// contact --all</span></h2>
+            <div class="about-grid">
+              <div class="about-card">
+                <h3>微信</h3>
+                <p>jerreycn</p>
+              </div>
+              <div class="about-card">
+                <h3>Email</h3>
+                <p><a href="mailto:jerreycn@qq.com">jerreycn@qq.com</a></p>
+              </div>
+              <div class="about-card">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/jerreycn" target="_blank" rel="noopener">github.com/jerreycn</a></p>
+              </div>
+              <div class="about-card">
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com/in/jerreycn" target="_blank" rel="noopener">linkedin.com/in/jerreycn</a></p>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <p><span class="prompt-sep">$</span> exit 0 &nbsp;·&nbsp; © <span id="year"></span> Jerrey · Powered by GitHub Pages</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
