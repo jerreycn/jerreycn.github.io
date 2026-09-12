@@ -13,6 +13,13 @@
   },
   "posts": [
     {
+      "slug": "token-infrastructure",
+      "date": "2026-09-12",
+      "title": "为什么 Token 也成了新基建？",
+      "summary": "用官方数据讲清 Token 的基建化：Google 月处理 980 万亿、豆包日均 50 万亿、单价 18 个月降 280 倍、IEA 用电翻倍预测，以及基建四特征逐条对照。",
+      "tags": ["AI", "大模型", "基础设施"]
+    },
+    {
       "slug": "ai-good-or-bad",
       "date": "2026-09-12",
       "title": "AI 越来越强大，到底是好事还是坏事？",
