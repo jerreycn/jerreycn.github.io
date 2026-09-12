@@ -13,6 +13,13 @@
   },
   "posts": [
     {
+      "slug": "token-as-workload",
+      "date": "2026-09-12",
+      "title": "以后工作量的衡量，要按 Token 用量来定义",
+      "summary": "从打卡钟到人月再到 Token：微软把 AI 使用纳入绩效、Google 30% 代码 AI 生成、Salesforce 冻结工程招聘——Token 如何成为新的工作量度量并重排用人结构。",
+      "tags": ["AI", "职场", "效率"]
+    },
+    {
       "slug": "token-infrastructure",
       "date": "2026-09-12",
       "title": "为什么 Token 也成了新基建？",
