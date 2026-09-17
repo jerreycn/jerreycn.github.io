@@ -13,6 +13,13 @@
   },
   "posts": [
     {
+      "slug": "ai-coding-programmer-value",
+      "date": "2026-09-17",
+      "title": "AI 都能帮我们写代码了，程序员的价值是不是降低了？",
+      "summary": "不站队摆证据：Google 75% 新代码由 AI 生成是真的，METR 实验里资深开发者用 AI 反而慢 19% 也是真的——矛盾出在任务性质而非谁对谁错。拆解 AI 写了多少代码、用了到底快没快、市场什么变了，以及哪些能力在贬值、哪些在升值。",
+      "tags": ["AI", "职场", "程序员"]
+    },
+    {
       "slug": "china-llm-comparison",
       "date": "2026-09-14",
       "title": "国产大模型横评：DeepSeek、千问、GLM、Kimi、豆包与 Seed，到底怎么选？",
