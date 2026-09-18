@@ -13,6 +13,20 @@
   },
   "posts": [
     {
+      "slug": "postgresql-commands",
+      "date": "2026-09-18",
+      "title": "PostgreSQL 常用命令及使用说明",
+      "summary": "基于 PostgreSQL 18 的完整命令速查：psql 元命令、库/模式/用户权限、COPY 与 UPSERT、索引与执行计划、pg_dump/pg_basebackup 备份恢复、会话与锁排查，以及 PG 18 的异步 I/O、uuidv7 等变化。",
+      "tags": ["PostgreSQL", "数据库", "工具箱"]
+    },
+    {
+      "slug": "dameng-commands",
+      "date": "2026-09-18",
+      "title": "达梦数据库（DM）常用命令及使用说明",
+      "summary": "信创场景最常用的国产数据库命令速查：dminit 初始化与不可改的建库参数、disql 连接与脚本执行、表空间与数据文件、dexp/dimp 逻辑备份、dmrman 物理还原四步法、参数 scope 语义纠偏与故障排查表。",
+      "tags": ["达梦", "国产数据库", "数据库"]
+    },
+    {
       "slug": "ai-coding-programmer-value",
       "date": "2026-09-17",
       "title": "AI 都能帮我们写代码了，程序员的价值是不是降低了？",
