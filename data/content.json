@@ -13,6 +13,13 @@
   },
   "posts": [
     {
+      "slug": "redis-commands",
+      "date": "2026-09-19",
+      "title": "Redis 常用命令及使用说明",
+      "summary": "基于 Redis 8.x 的命令速查：连接与运维工具、通用键命令与 SCAN 游标遍历、九大数据类型（含 7.4 字段级 TTL、8.10 紧凑哈希与 HIMPORT）、Pub/Sub 与 Stream 的可靠性差异、RDB/AOF 持久化、主从哨兵集群、内存淘汰策略与故障速查表。",
+      "tags": ["Redis", "缓存", "数据库", "工具箱"]
+    },
+    {
       "slug": "postgresql-commands",
       "date": "2026-09-18",
       "title": "PostgreSQL 常用命令及使用说明",
